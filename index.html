@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>hCard Builder</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="hcard, hcard builder" />
+    <meta name="description" content="create your personal hcard" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700,800|Merriweather:400,700" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+
+<body>
+    <div class="hcard-body">
+        <div class="hcard-input-section">
+
+                <h1>hCard Builder</h1>
+                    <form>
+                        <fieldset>
+                            <legend>personal details</legend>
+                            <div class="input-field">
+                                <label for="givenname">given name</label>
+                                <input type="text" id="givenname" />
+                            </div>
+                            <div class="input-field">
+                                <label for="surname">surname</label>
+                                <input type="text" id="surname" />
+                            </div>
+                            <div class="input-field">
+                                <label for="email">email</label>
+                                <input type="text" id="email" />
+                            </div>
+                            <div class="input-field">
+                                <label for="phone">phone</label>
+                                <input type="text" id="phone" />
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>address</legend>
+                            <div class="input-field">
+                                <label for="housename">house name or #</label>
+                                <input type="text" id="housename" />
+                            </div>
+                            <div class="input-field">
+                                <label for="street">street</label>
+                                <input type="text" id="street" />
+                            </div>
+                            <div class="input-field">
+                                <label for="suburb">suburb</label>
+                                <input type="text" id="suburb" />
+                            </div>
+                            <div class="input-field">
+                                <label for="state">state</label>
+                                <input type="text" id="state" />
+                            </div>
+                            <div class="input-field">
+                                <label for="postcode">postcode</label>
+                                <input type="text" id="postcode" />
+                            </div>
+                            <div class="input-field">
+                                <label for="country">country</label>
+                                <input type="text" id="country" />
+                            </div>
+                        </fieldset>
+                        <div class="hcard-submit">
+                            <input type="file" accept="image/*" onchange="loadFile(event)" id="upload" />
+                            <button class="button-upload" onclick="document.getElementById('upload').click();">Upload Avatar</button>
+                            <button class="button-create">Create hCard</button>
+                        </div>
+                    </form>
+        </div>
+
+        <div class="hcard-output-section">
+            <div class="preview-container">
+                <h3>hcard preview</h3>
+                <div class="hcard-header">
+                    <div class="hcard-preview-name" >
+                    <span id="hcard-givenname"></span>
+                    <span id="hcard-surname"></span>
+                    </div>
+                    <img class="hcard-photo" id="hcard-photo" />
+                </div>
+
+                <div class="hcard-detail">
+                    <div class="hcard-row">
+                        <span class="hcard-label">email</span>
+                        <span class="hcard-preview-field" id="hcard-email"></span>
+                    </div>
+                    <div class="hcard-row">
+                        <span class="hcard-label">phone</span>
+                        <span class="hcard-preview-ield" id="hcard-phone"></span>
+                    </div>
+                    <div class="hcard-row">
+                        <span class="hcard-label">address</span>
+                        <span class="hcard-preview-field" id="hcard-housename"></span>
+                        <span class="hcard-preview-field" id="hcard-street"></span>
+
+                    </div>
+                    <div class="hcard-row hcard-row-empty-label">
+                        <span class="hcard-label"></span>
+                        <span class="hcard-preview-field" id="hcard-suburb"></span>
+                        <span class="hcard-preview-field" id="hcard-state"></span>
+                    </div>
+                    <div class="hcard-row hcard-row-col">
+                        <div class="col">
+                            <span class="hcard-label">postcode</span>
+                            <span class="hcard-preview-field" id="hcard-postcode"></span>
+                        </div>
+
+                        <div class="col">
+                            <span class="hcard-label">country</span>
+                            <span class="hcard-preview-field" id="hcard-country"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/script.js" type="text/javascript"></script>
+
+</body>
+
+</html>

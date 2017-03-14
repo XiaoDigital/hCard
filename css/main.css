@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+
+/*hCard Builder Body*/
+.hcard-body {
+    width: 1000px;
+    margin: 0 auto;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+/*hCard Builder Input*/
+.hcard-input-section {
+    float: left;
+    width: 480px;
+    padding: 40px;
+}
+.hcard-input-section h1 {
+    margin-top: 0;
+    font-size: 1.75em;
+}
+fieldset {
+    padding: 0;
+    margin-bottom: 19px;
+    border: none;
+}
+legend {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 26px;
+    font-size: .625em;
+    font-weight: bold;
+    color: #b0b8bc;
+    line-height: 20px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #b0b8bc;
+}
+.input-field {
+    float: left;
+    width: 50%;
+    margin-bottom: 15px;
+}
+.input-field input:focus {
+    border: 1px solid #021796;
+    background-color: #f0f9ff; 
+}
+.input-field:nth-child(odd) {
+    padding-left: 10px;
+}
+.input-field:nth-child(even) {
+    padding-right: 10px;
+}
+label {
+    display: block;
+    font-size: .75em;
+    color: #2c3e50;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+input {
+    display: block;
+    width: 100%;
+    height: 35px;        
+    padding: 7px 10px;
+    font-family: 'Merriweather', serif;
+    font-size: 1em;    
+    border: 1px solid #b0b8bc;
+    border-radius: 4px;
+}
+button {
+    width: 190px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1.25em;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.button-upload {
+    margin-right: 7px;
+    border-bottom: 2px solid #3f515d;
+    background-color: #627b8b;
+}
+
+/* add transparent input layer on button*/
+.hcard-submit input {
+    position: absolute;
+    width: 190px;
+    height: 45px;
+    opacity: 0;
+    cursor: pointer;
+}
+::-webkit-file-upload-button {
+    cursor: pointer;
+}
+.button-create {
+    margin-left: 7px;
+    border-bottom: 2px solid #2980b9;
+    background-color: #3498db;
+}
+
+/*hCard Builder Output*/
+.hcard-output-section {
+    float: left;
+    width: 520px;
+    padding: 110px 45px 180px;
+    background-color: #e1e4e7;
+}
+.preview-container {
+    border-bottom: 2px solid #9a9a9a;
+}
+.preview-container h3 {
+    margin: 0 0 11px 0;
+	font-size: 1.25em;
+	font-weight: 400;
+    color: #95a5a6;
+    text-align: right;
+}
+.hcard-header {
+    position: relative;
+    height: 100px;
+    padding: 54px 25px 25px;
+    background-color: #2c3e50;   
+}
+.hcard-preview-name {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+}
+.hcard-photo {
+    position: absolute;
+    top: 11px;
+    right: 13px;
+    width: 84px;
+    height: 106px;
+    background: url(../image/placeholder.png) no-repeat;
+    border-left: 1px solid #b3b3b3;
+    border-right: 1px solid #b3b3b3;
+    border-bottom: 2px solid #b3b3b3;
+}
+.hcard-detail {
+    padding: 36px 25px 25px;
+    background-color: #fff;
+}
+.hcard-row {
+    margin-bottom: 12px;
+    border-bottom: 1px solid #dbe0e2;
+    line-height: 1.5;
+    color: #34495e;
+}
+.hcard-label {
+    display: inline-block;
+    width: 75px;
+    font-size: 0.625em;
+    text-transform: uppercase;
+}
+.hcard-row-empty-label {
+    height: 25px;
+}
+.hcard-row-col {
+    display: inline-block;
+	width: 100%;
+    border-bottom: 0;
+}
+.hcard-row-col .col {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    border-bottom: 1px solid #dbe0e2;
+}
+.hcard-preview-field {
+    display: inline-block;
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    color: #000;
+}
+
+/*responsive UI */
+
+/*for desktop */
+@media only screen and (max-width: 1000px) {
+    .hcard-body {
+        width: 100%;
+    }
+    .hcard-input-section {
+        width: 100%;
+    }
+    .hcard-output-section {
+        width: 100%;
+    }
+}
+
+/*for ipad & landscape mobile */
+@media (min-width: 414px) and (max-width: 1000px) {
+	button, .button-upload, .hcard-submit input, .button-create {
+		float: left;
+		width: 49%;
+		margin: 0;
+	}
+
+	.button-create {
+		margin-left: 2%;
+	}
+
+
+}
+/*for portrait mobile */
+@media only screen and (max-width: 414px) {
+    .hcard-input-section {
+    	padding: 20px;
+    }
+
+    .input-field {
+        width: 100%;
+    }
+	.input-field:nth-child(odd) {
+	    padding-left: 0px;
+	}
+	.input-field:nth-child(even) {
+	    padding-right: 0px;
+	}
+
+	button, .button-upload, .hcard-submit input, .button-create {
+		width: 100%;
+		margin: 0 0 20px;
+	}
+
+    .hcard-output-section{
+    	padding: 20px;
+    }
+
+}
